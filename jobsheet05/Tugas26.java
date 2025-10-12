@@ -5,7 +5,7 @@ public class Tugas26 {
     public static void main (String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Masukkan angka: ");
+        System.out.println("Masukkan Angka: ");
         int angka;
         angka = sc.nextInt();
 
