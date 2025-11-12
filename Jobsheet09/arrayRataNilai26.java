@@ -9,12 +9,21 @@ public class arrayRataNilai26 {
         int[] nilaiMhs = new int[jumlahMhs];
         int jumlahLulus = 0;
         int jumlahTidakLulus = 0;
+        int nilaiTertinggi = Integer.MIN_VALUE;
+        int nilaiTerendah = Integer.MAX_VALUE;
         double totalLulus = 0;
         double totalTidakLulus = 0;
 
         for (int i = 0; i < jumlahMhs; i++) {
             System.out.print("Masukkan nilai mahasiswa ke-" + (i + 1) + " : ");
             nilaiMhs[i] = sc.nextInt();
+
+            if (nilaiMhs[i] > nilaiTertinggi) {
+                nilaiTertinggi = nilaiMhs[i];
+            }
+            if (nilaiMhs[i] < nilaiTerendah) {
+                nilaiTerendah = nilaiMhs[i];
+            }
 
             if (nilaiMhs[i] > 70) {
                 totalLulus += nilaiMhs[i];
@@ -30,5 +39,7 @@ public class arrayRataNilai26 {
 
         System.out.println("Rata-rata nilai lulus = " + rataLulus);
         System.out.println("Rata-rata nilai tidak lulus = " + rataTidakLulus);
+        System.out.println("Nilai tertinggi = " + nilaiTertinggi);
+        System.out.println("Nilai terendah = " + nilaiTerendah);
     }
 }
